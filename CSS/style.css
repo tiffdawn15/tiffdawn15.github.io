@@ -1,6 +1,6 @@
 body {
     background-color: tan;
-    background-image: url("/Users/tiffanymesser/sei32/labs/Portfolio/tiffdawn15.github.io/CSS/beach.jpeg"); 
+    background-image: url("./beach.jpeg"); 
     background-repeat: no-repeat;
     color: black;
     margin: 0 auto;
