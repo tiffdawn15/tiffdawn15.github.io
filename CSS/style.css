@@ -1,10 +1,10 @@
 @media screen and (min-width: 500px){
     width: 100%;
 }
-
+/* I want my responsive design to have a menu button that has a pop up with a bit of a 3d look.*/
 body {
-    background-color: tan;
-    background-image: url("https://github.com/tiffdawn15/tiffdawn15.github.io/blob/master/CSS/beach.jpeg?raw=true"); 
+    background-color: #84e9d9;
+    background-image: url(https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80); 
     background-repeat: no-repeat;
     color: black;
     margin: 0 auto;
@@ -18,12 +18,13 @@ body {
     
 }
 
-h1 {
+h2 {
     text-align: center;
     top: 50%;
     left: 50%;
     position: absolute;
     padding:0px;
+    color: #D7999B;
 
 }
 
@@ -36,7 +37,7 @@ img {
 
 aside {
 
-    background-color:tan;
+    background-color:#84c3d5;
     text-align: center;
     width: 150px;
     min-height: 100vh;
