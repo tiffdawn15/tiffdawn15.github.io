@@ -15,10 +15,10 @@ body {
 
 article {
     display: flex;
-    justify-content: left;
-    align-items: center;
+  
+    
     flex-direction: column;
-    text-align: center;
+   
 }
 
 
@@ -31,8 +31,11 @@ h1{
     color: limegreen;
 }
 h2{
-    font-size: 34px;
+    font-size: 30px;
     
+}
+p{
+    color: white;
 }
 .header-nav {
     justify-content: space-between;
@@ -49,13 +52,13 @@ h2{
 }
 
 a  {
-    color: rgb(224, 228, 21);
+    color: rgba(7, 250, 238, 0.938);
     padding: 15px;
     font-size: 22px;
 }
 
 .Projects {
-    background-image:url(https://images.unsplash.com/photo-1454165205744-3b78555e5572?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-image:url(https://images.unsplash.com/photo-1422640805998-18a4dd89bec2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1148&q=80);
     height: 500px; 
     width: 100%; 
     padding: 100px;
@@ -64,6 +67,8 @@ a  {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  flex-wrap: wrap;
 }
 
 ul {
@@ -78,6 +83,8 @@ li {
     line-height:1.5em;
     border-bottom:1px solid #ccc;
     list-style-type: none;
+    font-size: 22px; 
+ 
     
 }
 
