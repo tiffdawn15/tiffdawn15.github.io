@@ -66,7 +66,20 @@ a  {
   background-size: cover;
 }
 
-
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-rule: dotted 1px #333;
+    list-style-position: inside;
+    
+  }
+li {
+    line-height:1.5em;
+    border-bottom:1px solid #ccc;
+    list-style-type: none;
+    
+}
 
 footer {
     text-align: center;
