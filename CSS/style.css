@@ -2,47 +2,83 @@
     width: 100%;
 }
 /* I want my responsive design to have a menu button that has a pop up with a bit of a 3d look.*/
+
+
+
 body {
-    background-color: #84e9d9;
-    background-image: url(https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80); 
+    background-color: #002447;
     background-repeat: no-repeat;
     color: black;
-    margin: 0 auto;
+    
     background-size: cover;
     min-height: 100%;
-    
-}
-.background {
-    opacity: .75;
-    color: #222;
-    
-}
+    color:#FBECEB;
 
-h2 {
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    padding:0px;
-    color: #D7999B;
-
-}
-
-img {
-    height: 50px;
-    width: 50px;
-    align-content: center;
-    display: block;
-}
-
-aside {
-
-    background-color:#84c3d5;
-    text-align: center;
-    width: 150px;
-    min-height: 100vh;
-    position: fixed;
-    padding: 0px;
    
     
+   
+  
+    
 }
+
+article {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+   
+}
+
+
+header{
+    text-align: center;
+}
+.header-nav {
+    justify-content: space-between;
+
+}
+
+
+
+.AboutMe {
+    /* background-image: url(https://images.unsplash.com/photo-1567539159398-3174869584e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80); 
+    background-repeat: no-repeat;
+
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+
+}
+
+a  {
+    color:#53D3D1
+}
+
+.Projects {
+    background-image:url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    height: 500px; 
+    width: 100%; 
+    padding: 100px;
+    
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Contact {
+    /* background-image: url(https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-repeat: no-repeat;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+\
