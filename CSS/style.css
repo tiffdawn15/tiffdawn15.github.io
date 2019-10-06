@@ -1,9 +1,3 @@
-@media screen and (min-width: 500px){
-    width: 100%;
-}
-/* I want my responsive design to have a menu button that has a pop up with a bit of a 3d look.*/
-
-
 
 body {
     background-color: #002447;
@@ -13,11 +7,6 @@ body {
     background-size: cover;
     min-height: 100%;
     color:#FBECEB;
-
-   
-    
-   
-  
     
 }
 
@@ -27,13 +16,15 @@ article {
     align-items: center;
     flex-direction: column;
     text-align: center;
-
-   
 }
 
 
 header{
     text-align: center;
+
+}
+h1{
+    font-size: 36px;
 }
 .header-nav {
     justify-content: space-between;
@@ -43,24 +34,19 @@ header{
 
 
 .AboutMe {
-    /* background-image: url(https://images.unsplash.com/photo-1567539159398-3174869584e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80); 
-    background-repeat: no-repeat;
-
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
+  text-align: center;
+  font-size: 24px;
 
 
 }
 
 a  {
-    color:#53D3D1
+    color:rgb(252, 63, 63);
+    padding: 15px;
 }
 
 .Projects {
-    background-image:url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-image:url(https://images.unsplash.com/photo-1454165205744-3b78555e5572?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
     height: 500px; 
     width: 100%; 
     padding: 100px;
@@ -71,14 +57,9 @@ a  {
   background-size: cover;
 }
 
-.Contact {
-    /* background-image: url(https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-    background-repeat: no-repeat;
-    
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
-\
+
+footer {
+    text-align: center;
+    justify-content: space-between;
+}
