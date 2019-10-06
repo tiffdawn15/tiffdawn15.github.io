@@ -27,7 +27,12 @@ header{
 
 }
 h1{
-    font-size: 36px;
+    font-size: 42px;
+    color: limegreen;
+}
+h2{
+    font-size: 34px;
+    
 }
 .header-nav {
     justify-content: space-between;
@@ -44,7 +49,7 @@ h1{
 }
 
 a  {
-    color:rgb(255, 251, 15);
+    color: rgb(224, 228, 21);
     padding: 15px;
     font-size: 22px;
 }
