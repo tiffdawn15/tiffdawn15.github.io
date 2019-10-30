@@ -1,11 +1,12 @@
 html {
   font-family: "Rajdhani", sans-serif;
+
 }
 
 /* My name in the header  */
 
 h1 {
-    font-size: 52px;
+    font-size: 64px;
     color: #32cd32;
     
   }
@@ -79,6 +80,7 @@ body {
     float: left;
     border-radius:  55%;
     max-height: 300px;
+    padding: 0px 80px;
 
 
 }
@@ -90,7 +92,7 @@ header {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 46px;
   text-align: center;
 }
 p {
@@ -127,7 +129,6 @@ a {
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
   display: flex;
-
 }
 
 .slide {
@@ -162,15 +163,13 @@ ul {
   -moz-columns: 2;
   column-rule: dotted 1px #333;
   list-style-position: inside;
-  padding: 15px 80px;
-  text-align: center;
 }
 .skill {
   line-height: 1.5em;
   
   list-style-type: none;
   font-size: 22px;
-
+  text-align: center;
 }
 
 /* 
@@ -218,15 +217,20 @@ input[type=text], select, textarea {
 
 
 /* Stying in the footer section. */
+
+
+
 footer {
   text-align: center;
-  justify-content: space-between;
-  flex-direction: row;
-
+  justify-content: left;
+  
 }
 
+.icons{
+    flex-direction: column;
+   
+}
 
 svg{
-    max-height: 35px;
-    
+    max-height: 46px;
 }
