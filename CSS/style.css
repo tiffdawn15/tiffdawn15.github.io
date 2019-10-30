@@ -13,6 +13,9 @@ h1 {
 
 /* Nav bar in at the top */
 
+
+
+
 nav {
   width: 100%;
   margin: 20px 0;
@@ -31,7 +34,8 @@ li a {
 }
 
 li a:hover {
-    background-color: #F894FD;;
+    background-color: #9ee79e;
+    color: #D041D0;
 }
 
 
@@ -57,7 +61,6 @@ body {
 
 
 
-
 }
 
 .paralax{
@@ -71,6 +74,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.myFace{
+    float: left;
+    border-radius:  55%;
+    max-height: 300px;
+
+
+}
+
+
 
 header {
   text-align: center;
@@ -90,6 +103,11 @@ p {
 .AboutMe {
   text-align: center;
   font-size: 24px;
+  padding: 50px 50px;
+
+
+
+
 }
 
 /* Styling for Project sections */
@@ -135,10 +153,7 @@ img {
 
 
 
-.Skills {
 
-
-}
 
 ul {
   columns: 2;
@@ -149,12 +164,21 @@ ul {
 }
 .skill {
   line-height: 1.5em;
-  border-bottom: 1px solid #ccc;
+  
   list-style-type: none;
   font-size: 22px;
 }
 
+/* Stying in the footer section. */
 footer {
   text-align: center;
   justify-content: space-between;
+  flex-direction: row;
+
+}
+
+
+svg{
+    max-height: 35px;
+    
 }
