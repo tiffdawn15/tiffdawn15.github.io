@@ -235,15 +235,19 @@ input[type=text], select, textarea {
 /* Stying in the footer section. */
 
 footer {
-  
-}
-.icons{
   display: flex;
   flex-direction: row;
-}
-.icon{
-  height: 50px;
+  align-items: center;
+  justify-content: space-around;
 }
 
+.icon{
+  max-height: 50px;
+  border-radius: 25px;
+}
+
+.email{
+  float: right;
+}
 
 
