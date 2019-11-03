@@ -29,6 +29,7 @@ h1 {
 nav {
   width: 100%;
   margin: 20px 0;
+  
 
 }
 
@@ -36,17 +37,20 @@ nav ul {
   width: 100%;
   display: flex;
   justify-content: center;
+  
 }
 
 li a {
     padding: 8px 16px;
     text-decoration: none;
+    font-size: 20px;
+    border-right: black;
 }
 
 li a:hover {
-    background-color: #9ee79e;
+    background-color: #d1f0d1;
     opacity: 0.5;
-    color: palevioletred;
+    color: black;
 
     
 }
@@ -233,15 +237,15 @@ input[type=text], select, textarea {
 
 
 footer {
-  text-align: center;
-  justify-content: left;
+ 
+  
+
+
+  
   
 }
 
-.icons{
-    flex-direction: column;
-   
-}
+
 
 svg{
     max-height: 46px;
