@@ -234,19 +234,16 @@ input[type=text], select, textarea {
 
 /* Stying in the footer section. */
 
-
-
 footer {
- 
   
-
-
-  
-  
+}
+.icons{
+  display: flex;
+  flex-direction: row;
+}
+.icon{
+  height: 50px;
 }
 
 
 
-svg{
-    max-height: 46px;
-}
