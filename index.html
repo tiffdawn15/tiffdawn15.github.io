@@ -17,10 +17,9 @@
 
 <!-- My name and the Nav bar -->
 <header>
-    <div class="nav-bar d-flex">
-        <nav>
-            <h2 class="d-flex flex-row">Tiffany Messer</h2>
-
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
             <ul class="nav d-flex flex-row">
                 <li class="nav-item noDot">
                     <a lass="nav-link active item" href="#skills">Skills </a>
@@ -28,33 +27,39 @@
                     <a lass="nav-link active item" href="projects.html">Projects </a>
                 </li>
             </ul>
-        </nav>
-        </li>
-        <!-- // TODO: Fix the padding and margin on the header -->
-        <!-- //TODO: Move this to the right -->
-        <div class="d-flex flex-row">
-            <a href="https://www.linkedin.com/in/tiffany-messer/" target="_blank" class="icons">
-                <img src="CSS/linkedIn.png" alt="LinkedIn" class="icon"></svg>
-            </a>
-
-            <a href="https://github.com/tiffdawn15" target="_blank" class="icons">
-                <img src=CSS/computer-icons-github-github-logo-save-icon-format.jpg alt="github" class="icon">
-            </a>
+          </div>
         </div>
-    </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
 </header>
 
 <body>
     <!--This section will have background image, headshot (rounded), and name and bit about me-->
 
-    <div class="d-flex  paralax">
+    <div class="d-flex paralax">
         <!-- // TODO: Make this a small box with my name and links  -->
-        <div class="d-flex flex-column justify-content-start">
-            <img src="../tiffdawn15.github.io/resources/images/myface.jpg" alt="My face" class="myFace">
-            <p class="">FULL STACK ENGINEER</p>
+        <div class="d-flex flex-column justify-content-start mt-2 px-2 photoSection">
+            <img src="../tiffdawn15.github.io/resources/images/myface.jpg" alt="My face" class="mt-4 myFace">
+            <h2 class="d-flex flex-row">Tiffany Messer</h2>
+
+            <p class="d-flex justify-content-center">FULL STACK ENGINEER</p>
+            <!-- //TODO: Move this to the right -->
+            <div class="d-flex flex-row justify-content-center">
+                <a href="https://www.linkedin.com/in/tiffany-messer/" target="_blank" class="icons">
+                    <img src="CSS/linkedIn.png" alt="LinkedIn" class="icon"></svg>
+                </a>
+
+                <a href="https://github.com/tiffdawn15" target="_blank" class="icons">
+                    <img src=CSS/computer-icons-github-github-logo-save-icon-format.jpg alt="github" class="icon">
+                </a>
+            </div>
         </div>
 
-        <div class="aboutMe rounded" id=aboutMe>
+        <div class="mt-2 rounded aboutMe" id=aboutMe>
             <h2>About Me </h2>
             <!-- //TODO: Make this workding better -->
             <p>First engineer and key member of the User Applications team building the two flagship applications for
@@ -94,6 +99,8 @@
                     <li class="skill">Jira</li>
                     <li class="skill">Git </li>
                     <li class="skill">Python</li>
+                    <li class="skill">GraphQL Apis</li>
+                    <li class="skill">RESTful Apis</li>
                 </ul>
             </article>
         </div>

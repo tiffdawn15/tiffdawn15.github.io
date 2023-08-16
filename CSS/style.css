@@ -100,6 +100,11 @@ p {
   justify-content: space-between;
 }
 
+.photoSection {
+  background-color: red;
+  padding: auto;
+}
+
 .aboutMe {
   background-color: #3a2fd5;
   text-align: center;
