@@ -263,3 +263,8 @@ footer {
 .email {
   float: right;
 }
+
+.developer-comment {
+  background-color: #546277;
+  opacity: 90%;
+}
