@@ -18,23 +18,36 @@
 <!-- My name and the Nav bar -->
 <header>
     <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <ul class="nav d-flex flex-row">
-                <li class="nav-item noDot">
-                    <a lass="nav-link active item" href="#skills">Skills </a>
-                <li class="nav-item noDot">
-                    <a lass="nav-link active item" href="projects.html">Projects </a>
-                </li>
-            </ul>
-          </div>
-        </div>
-        <nav class="navbar navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+
+        <!--Nav Bar -->
+
+        <!-- //TODO: Make this my logo -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand" href="#">Tiff</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="nav d-flex flex-row">
+                    <li class="nav-item noDot">
+                        <a lass="nav-link active item" href="#skills">Skills </a>
+                    <li class="nav-item noDot">
+                        <a lass="nav-link active item" href="projects.html">Projects </a>
+                    </li>
+                    <!-- <li class="nav-item noDot">
+                        <a lass="nav-link active item" href="projects.html">Contact Me</a>
+                    </li> -->
+                </ul>
+                <!-- // TODO: Add Search -->
+                <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+            </div>
         </nav>
-      </div>
+    </div>
 </header>
 
 <body>
@@ -62,7 +75,7 @@
         <div class="mt-2 rounded aboutMe" id=aboutMe>
             <h2>About Me </h2>
             <!-- //TODO: Make this workding better -->
-            <p>First engineer and key member of the User Applications team building the two flagship applications for
+            <p> First engineer and key member of the User Applications team building the two flagship applications for
                 Picnic (Command Center and CheckUp), associated infrastructure, and most recently spinning up an API
                 Service so customers could integrate our data with their own internal workflows and applications. Was
                 personally responsible for transforming product ideas into secure, maintainable, reliable, and beautiful

@@ -101,16 +101,18 @@ p {
 }
 
 .photoSection {
-  background-color: red;
-  padding: auto;
+  background-color: rgba(32,50,72,255);
+  opacity: 90%;
+  padding: 5px;
 }
 
 .aboutMe {
-  background-color: #3a2fd5;
+  background-color: #546277;
+  opacity: 90%;
   text-align: center;
   font-size: 24px;
   padding: 50px 50px;
-
+  margin-left: 50px;
 }
 
 .myFace {
@@ -187,10 +189,10 @@ ul {
 
 .skill {
   line-height: 1.5em;
-
   list-style-type: none;
   font-size: 22px;
   text-align: center;
+  margin: 20px;
 }
 
 /* 
