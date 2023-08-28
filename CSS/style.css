@@ -13,6 +13,8 @@ h1 {
 nav {
   width: 100%;
   margin: 20px 0;
+
+  display: flex;
 }
 
 nav ul {
@@ -20,6 +22,12 @@ nav ul {
   display: flex;
   justify-content: center;
 
+
+}
+
+.name-logo {
+  display: flex;
+  align-items: left;
 }
 
 li a {
@@ -72,12 +80,7 @@ body {
   background-size: cover;
 }
 
-.myFace {
-  float: left;
-  border-radius: 55%;
-  max-height: 300px;
-  padding: 0px 80px;
-}
+
 
 header {
   text-align: center;
@@ -97,11 +100,31 @@ p {
   justify-content: space-between;
 }
 
-.AboutMe {
+.photoSection {
+  background-color: rgba(32,50,72,255);
+  opacity: 90%;
+  padding: 5px;
+}
+
+.aboutMe {
+  background-color: #546277;
+  opacity: 90%;
   text-align: center;
   font-size: 24px;
   padding: 50px 50px;
+  margin-left: 50px;
+}
 
+.myFace {
+  float: left;
+  border-radius: 55%;
+  max-height: 300px;
+  padding: 0px 80px;
+}
+
+.photoBorder{
+  display: flex;
+  flex-direction: row;
 }
 
 /* Styling for Project sections */
@@ -122,7 +145,7 @@ a:hover {
 }
 
 .Projects {
-  color: #2BB789;
+  color: #543cdd;
 }
 
 /* Slide Show for Projects section */
@@ -166,10 +189,10 @@ ul {
 
 .skill {
   line-height: 1.5em;
-
   list-style-type: none;
   font-size: 22px;
   text-align: center;
+  margin: 20px;
 }
 
 /* 
@@ -239,4 +262,9 @@ footer {
 
 .email {
   float: right;
+}
+
+.developer-comment {
+  background-color: #546277;
+  opacity: 90%;
 }
