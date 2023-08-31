@@ -271,23 +271,42 @@ footer {
 // @media (min-width: 1200px) { ... }
 */
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
   body {
+    display: flex;
+    flex-direction: column;
     background-color: #141210;
     background-repeat: no-repeat;
-    color: black;
     background-size: cover;
     height: 100%;
-
     color: #05e4be;
+  }
+
+  .photoSection  {
+    width: 100%;
+    align-items: center;
+    padding: 1em !important
+    
+  }
+
+  .aboutMe {
+    padding: 1em !important;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .paralax {
+    display: flex;
+    flex-direction: column;
+    padding: 1em !important;
   }
 }
 
-@media screen and (min-width: 992px) {
+/* @media screen and (min-width: 992px) {
   .container {
     margin: 1em 2em;
   }
-}
+} */
 
 @media screen and (min-width: 1200px) {
   body {
