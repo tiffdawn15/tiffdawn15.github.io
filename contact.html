@@ -7,12 +7,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="linkedin-in-brands.svg">
-
 </head>
 
 <!-- My name and the Nav bar -->
@@ -37,7 +37,6 @@
                     <li class="nav-item noDot">
                         <a lass="nav-link active item" href="contact.html">Contact Me </a>
                     </li>
-                </ul>
             </div>
         </nav>
     </div>
@@ -47,52 +46,47 @@
     <!--This section will have background image, headshot (rounded), and name and bit about me-->
 
     <div class="d-flex paralax">
-        <div class="d-flex flex-column justify-content-start mt-2 px-2 photoSection">
-            <img src="./resources/images/myface.jpg" alt="My face" class="mt-4 myFace">
-            <h2 class="d-flex flex-row">Tiffany Messer</h2>
+        <!-- // TODO: Make this a small box with my name and links  -->
+        <div class="mt-2 rounded aboutMe" id=aboutMe>
+            <div class="d-flex flex-column justify-content-start mt-2 px-2 photoSection">
+                <img src="./resources/images/myface.jpg" alt="My face" class="mt-4 myFace">
+                <h2 class="d-flex flex-row">Tiffany Messer</h2>
 
-            <p class="d-flex justify-content-center">FULL STACK ENGINEER</p>
-            <div class="d-flex flex-row justify-content-center">
-                <a href="https://www.linkedin.com/in/tiffany-messer/" target="_blank" class="icons">
-                    <img src="CSS/linkedIn.png" alt="LinkedIn" class="icon"></svg>
-                </a>
+                <p class="d-flex justify-content-center">FULL STACK ENGINEER</p>
+                <!-- //TODO: Move this to the right -->
+                <div class="d-flex flex-row justify-content-center">
+                    <a href="https://www.linkedin.com/in/tiffany-messer/" target="_blank" class="icons">
+                        <img src="CSS/linkedIn.png" alt="LinkedIn" class="icon"></svg>
+                    </a>
 
-                <a href="https://github.com/tiffdawn15" target="_blank" class="icons">
-                    <img src=CSS/computer-icons-github-github-logo-save-icon-format.jpg alt="github" class="icon">
-                </a>
+                    <a href="https://github.com/tiffdawn15" target="_blank" class="icons">
+                        <img src=CSS/computer-icons-github-github-logo-save-icon-format.jpg alt="github" class="icon">
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="mt-2 rounded aboutMe" id=aboutMe>
-            <h2>About Me </h2>
-            <p class="aboutMeText"> I'm a software engineer based in the North East that builds end-to-end solutions. I
-                have four years of experience at early-stage startups and an invaluable background in product support. I
-                pride myself on being a one-stop shop for web applications.
-            </p>
+        <div class="d-flex flex-column justify-content-start mt-2 px-2 contact-form">
+            <div class="mt-2 rounded aboutMe" id=aboutMe>
 
-            <h1>Skills</h1>
-            <ul>
-                <li class="skill">HTML</li>
-                <li class="skill"> CSS</li>
-                <li class="skill">JavaScript</li>
-                <li class="skill">Angular</li>
-                <li class="skill">React</li>
-                <li class="skill">Mongoose</li>
-                <li class="skill">Express</li>
-                <li class="skill">Django</li>
-                <li class="skill">Node</li>
-                <li class="skill">Java</li>
-                <li class="skill">Spring Boot</li>
-                <li class="skill">Scala</li>
-                <li class="skill">MongoDb</li>
-                <li class="skill">Jira</li>
-                <li class="skill">Git </li>
-                <li class="skill">Python</li>
-                <li class="skill">GraphQL Apis</li>
-                <li class="skill">RESTful Apis</li>
-            </ul>
-            </feature>
+            <form>
+                <div class="contact-form">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name">
+                  </div>
+                <div class="contact-form">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="fcontact-form">
+                  <label for="exampleInputPassword1">Comment</label>
+                  <input type="text" class="form-control" id="comment" placeholder="Comment">
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="send()">Submit</button>
+              </form>
+              </div>
         </div>
+        
 
     </div>
 
@@ -106,6 +100,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        <script src="contact.js"></script>
+
 </body>
 
 <footer class="d-flex">
