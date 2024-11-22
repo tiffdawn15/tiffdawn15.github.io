@@ -14,6 +14,7 @@ nav {
   width: 100%;
   margin: 20px 0;
   display: flex;
+  background-color: #546277;
 }
 
 nav ul {
@@ -45,6 +46,7 @@ li a:hover {
 
 .navbar-light .navbar-brand {
   color: #05e4be;
+  background-color: #141210;
 }
 
 .noDot {
@@ -63,7 +65,7 @@ body {
   background-repeat: no-repeat;
   color: black;
   background-size: cover;
-  color: #05e4be;
+  color: #2bb789;
 }
 
 .paralax {
@@ -98,15 +100,17 @@ p {
   background-color: rgba(32, 50, 72, 255);
   opacity: 90%;
   padding: 5px;
+  border-radius: 90px;
+
 }
 
 .aboutMe {
   background-color: #546277;
   opacity: 90%;
-  text-align: center;
   font-size: 24px;
   padding: 50px 50px;
   margin-left: 50px;
+  border-radius: 90px;
 }
 
 .myFace {
@@ -261,16 +265,6 @@ footer {
   opacity: 90%;
 }
 
-/* // // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) { ... }
-
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) { ... }
-
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
-*/
-
 @media screen and (max-width: 576px) {
   body {
     display: flex;
@@ -337,9 +331,7 @@ footer {
   .footer {
     padding: 1em;
   }
-  .aboutMeText {
-
-  }
+ 
 }
 
 /* // // Small devices (landscape phones, 576px and up)
