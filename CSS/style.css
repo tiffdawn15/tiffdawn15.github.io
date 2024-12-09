@@ -6,7 +6,7 @@ html {
 
 h1 {
   font-size: 67px;
-  color: #2bb789;
+  color: #a09a79;
 }
 
 /* Nav bar in at the top */
@@ -36,7 +36,7 @@ li a {
 }
 
 li a:hover {
-  color: #05e4be;
+  color: #a09a79;
   text-shadow: 0px 0px 30px #32cd32;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -45,8 +45,7 @@ li a:hover {
 }
 
 .navbar-light .navbar-brand {
-  color: #05e4be;
-  background-color: #141210;
+  color: #a09a79;
 }
 
 .noDot {
@@ -65,13 +64,12 @@ body {
   background-repeat: no-repeat;
   color: black;
   background-size: cover;
-  color: #2bb789;
+  color: #eae2b7;
 }
 
 .paralax {
   background-image: url(https://images.unsplash.com/photo-1422640805998-18a4dd89bec2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1148&q=80);
   max-width: 100vw;
-  padding-bottom: 20px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,12 +82,11 @@ header {
 
 h2 {
   font-size: 50px;
-  text-align: center;
   margin: 0 auto;
 }
 
 p {
-  color: #2bb789;
+  color: #eae2b7;
 }
 
 .header-nav {
@@ -128,13 +125,13 @@ p {
 /* Styling for Project sections */
 
 a {
-  color: #05e4be;
+  color: #eae2b7;
   padding: 15px;
   font-size: 22px;
 }
 
 a:hover {
-  color: #32cd32;
+  color: #a09a79;
   text-shadow: 0px 0px 30px #32cd32;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -182,10 +179,17 @@ img {
 
 
 .skill {
-
+  width: 100%;
   text-align: center;
   padding: 10px;
   margin: 5px;
+}
+.frontend {
+  text-align: left;
+}
+
+.backend {
+  text-align: right;
 }
 
 
@@ -224,7 +228,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    color: #05e4be;
+    color: #eae2b7;
   }
 
   .photoSection  {
@@ -248,14 +252,13 @@ footer {
   body {
     background-color: #141210;
     background-repeat: no-repeat;
-    color: black;
     background-size: cover;
-    color: #05e4be;
+    color: #a09a79;
   }
 
   .paralax {
     height: 100%;
-    padding: 10vw
+    padding: 5vw
   }
   .footer {
     padding: 1em;
