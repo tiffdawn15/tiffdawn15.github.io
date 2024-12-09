@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
-<!--Add the meta data here. Link the CSS file.-->
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,7 +12,6 @@
 
 </head>
 
-<!-- My name and the Nav bar -->
 <header>
     <div>
 
@@ -40,13 +36,12 @@
 </header>
 
 <body>
-    <!--This section will have background image, headshot (rounded), and name and bit about me-->
     <div class="d-flex paralax">
-        <!-- // TODO: Make this a small box with my name and links  -->
+
+        <!-- // Top Section -->
         <div class="d-flex border flex-column justify-content-start mt-2 px-2 photoSection">
             <img src="./resources/images/myface.jpg" alt="My face" class="mt-4 myFace">
             <h2 class="d-flex flex-row">Tiffany Messer</h2>
-
             <p class="d-flex justify-content-center">Front End Engineer</p>
             <div class="d-flex flex-row justify-content-center">
                 <a href="https://www.linkedin.com/in/tiffany-messer/" target="_blank" class="icons">
@@ -59,40 +54,102 @@
             </div>
         </div>
 
-
-        <!-- // This is the about section -->
+        <!-- // About section -->
         <div class="mt-2 border rounded-pill aboutMe" id=aboutMe>
-            <h2>Hi, I'm Tiff </h2>
-            <!-- //TODO: Make this wording better -->
-            <p class="aboutMeText"> I'm a software engineer based in the North East that builds end-to-end solutions. I
-                have four years of experience at early-stage startups and an invaluable background in product support. I
-                pride myself on being a one-stop shop for web applications.
+            <h1>Hi, I'm Tiff... </h1>
+            <p class="aboutMeText"> As a full-stack software engineer with six years of professional experience, I
+                specialize in delivering robust web applications using Java and Angular, with a proven track record of
+                adaptability and technical versatility. My professional journey spans both startup and enterprise
+                environments, where I've demonstrated the ability to build complete codebases from scratch and
+                strategically maintain legacy systems.
+            </p>
+            <break />
+            <p>
+                My approach combines technical precision with a strategic mindset, enabling me to transform complex
+                technical challenges into streamlined, efficient web applications that drive business value.
             </p>
 
-            <h1>Skills</h1>
-            <ul>
-                <li class="skill">Angular</li>
-                <li class="skill">HTML</li>
-                <li class="skill">CSS</li>
-                <li class="skill">JavaScript</li>
-                <li class="skill">React</li>
-                <li class="skill">Express</li>
-                <li class="skill">Node</li>
-                <li class="skill">Java</li>
-                <li class="skill">Spring Boot</li>
-                <li class="skill">MongoDb</li>
-                <li class="skill">Jira</li>
-                <li class="skill">Git </li>
-                <li class="skill">Apis</li>
-            </ul>
-            </feature>
         </div>
 
+    </div>
 
-        <!-- // TODO: Add new Project Section  -->
+    <!-- // Skills Sections -->
+    <div class="d-flex paralax">
+        <div class="border rounded-pill aboutMe skill">
+            <h1>Skills</h1>
+            <div class="row">
+                <div class="col-6 frontend">
+                    <h2 class="skill">Frontend</h2>
+                    <div class="skill">Angular</div>
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">React</div>
+                </div>
+                <div class="col-6 backend">
+                    <h2 class="skill">Backend</h2>
+
+                    <div class="skill">Express</div>
+                    <div class="skill">Node</div>
+                    <div class="skill">Java</div>
+                    <div class="skill">Spring Boot</div>
+                    <div class="skill">MongoDb</div>
+                    <div class="skill">Jira</div>
+                    <div class="skill">Git</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- // Project Section -->
+    <div class="d-flex paralax  projects">
+        <div class="m-1 p-1 photoSection">
+            <H1 class="skill">Projects</H1>
+
+            <div class=" mastercopy m-1">
+                <h2>MasterCopy</h2>
+                <div class="w-100 p-3">
+                    <img src="./resources/images/Screenshot 2024-12-08 at 10.26.02 AM.png" alt="MasterCopy"
+                        class="projectImage">
+                </div>
+
+                <p class="p-3 m-2">
+                    Mastercopy is a full-stack Angular application that demonstrates my proficiency in API integration,
+                    responsive design, and solving real-world problems through technology. Leveraging the Art Institute
+                    of Chicago's open-source API, I developed a solution that addresses a critical challenge for
+                    artists: accessing high-quality, museum-grade images of master artworks. By implementing a
+                    Pinterest-inspired design system, the application provides a clean, intuitive
+                    interface for artists to explore and reference original artworks.
+                </p>
+                <break />
+                <p class="p-3 m-2">
+                    The project showcases my ability to:
+                </p>
+                <ul>
+                    <li>Integrate third-party APIs seamlessly into a robust Angular application</li>
+                    <li> Apply design principles to create a user-friendly, aesthetically pleasing interface </li>
+                    <li> Solve practical challenges through innovative software development</li>
+                    <li> Translate personal creative needs into scalable, technical solutions</li>
+
+                </ul>
+                <p class="p-3 m-2">
+                    The result is a targeted, efficient web application that bridges the gap between art reference resources
+                    and artist workflow, demonstrating my technical versatility and problem-solving approach.
+                </p>
+
     
+                </p>
+                <div class="p-3 square-photo-row">
+                    <img src="./resources/images/Screenshot 2024-11-22 at 4.14.57 PM.png" alt="MasterCopy"
+                        class="square-image ">
+                    <img src="./resources/images/Screenshot 2024-12-08 at 11.12.34 AM.png" alt="MasterCopy"
+                        class="square-image ">
+                </div>
+
+            </div>
 
 
+        </div>
     </div>
 
     <!-- bootstrap configs -->

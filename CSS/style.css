@@ -4,9 +4,10 @@ html {
 
 /* My name in the header  */
 
-h1 {
+h1, h2 {
   font-size: 67px;
-  color: #2bb789;
+  color: #fcbf49;
+  padding-left: 0.5em;
 }
 
 /* Nav bar in at the top */
@@ -36,7 +37,7 @@ li a {
 }
 
 li a:hover {
-  color: #05e4be;
+  color: #fcbf49;
   text-shadow: 0px 0px 30px #32cd32;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -45,8 +46,7 @@ li a:hover {
 }
 
 .navbar-light .navbar-brand {
-  color: #05e4be;
-  background-color: #141210;
+  color: #fcbf49;
 }
 
 .noDot {
@@ -65,13 +65,12 @@ body {
   background-repeat: no-repeat;
   color: black;
   background-size: cover;
-  color: #2bb789;
+  color: #eae2b7;
 }
 
 .paralax {
   background-image: url(https://images.unsplash.com/photo-1422640805998-18a4dd89bec2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1148&q=80);
   max-width: 100vw;
-  padding: 100px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,12 +83,11 @@ header {
 
 h2 {
   font-size: 50px;
-  text-align: center;
   margin: 0 auto;
 }
 
 p {
-  color: #2bb789;
+  color: #eae2b7;
 }
 
 .header-nav {
@@ -125,16 +123,19 @@ p {
   flex-direction: row;
 }
 
+.projectImage{
+  width: 100%;
+}
 /* Styling for Project sections */
 
 a {
-  color: #05e4be;
+  color: #eae2b7;
   padding: 15px;
   font-size: 22px;
 }
 
 a:hover {
-  color: #32cd32;
+  color: #eae2b7;
   text-shadow: 0px 0px 30px #32cd32;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -144,6 +145,18 @@ a:hover {
 
 .Projects {
   color: #543cdd;
+}
+
+.square-photo-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.square-image {
+  height: 30rem;
+  max-width: 40rem;
+  padding: 10px;
 }
 
 /* Slide Show for Projects section */
@@ -162,77 +175,32 @@ a:hover {
   justify-content: space-between;
 }
 
-img {
-  max-height: 500px;
-  max-width: 700px;
+/* img {
+  height: 75%;
   padding: 10px;
   align-items: center;
-}
+} */
 
 .wrapper {
   flex-direction: column;
   padding: 15px;
 }
 
-/* Styling for Skills section  */
-
-ul {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  column-rule: dotted 1px #333;
-  list-style-position: inside;
-}
 
 .skill {
-  line-height: 1.5em;
-  list-style-type: none;
-  font-size: 22px;
-  text-align: center;
-  margin: 20px;
-}
-
-/* 
-Contact form  */
-
-/* Style inputs with type="text", select elements and textareas */
-input[type="text"],
-select,
-textarea {
   width: 100%;
-  /* Full width */
-  padding: 12px;
-  /* Some padding */
-  border: 1px solid #ccc;
-  /* Gray border */
-  border-radius: 4px;
-  /* Rounded borders */
-  box-sizing: border-box;
-  /* Make sure that padding and width stays in place */
-  margin-top: 6px;
-  /* Add a top margin */
-  margin-bottom: 16px;
-  /* Bottom margin */
-  resize: vertical;
-  /* Allow the user to vertically resize the textarea (not horizontally) */
-  opacity: 0.7;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+}
+.frontend {
+  text-align: left;
 }
 
-/* Style the submit button with a specific background color etc */
-input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.backend {
+  text-align: right;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
 
 /* Add a background color and some padding around the form */
 .container {
@@ -260,10 +228,6 @@ footer {
   float: right;
 }
 
-.developer-comment {
-  background-color: #546277;
-  opacity: 90%;
-}
 
 @media screen and (max-width: 576px) {
   body {
@@ -273,7 +237,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    color: #05e4be;
+    color: #eae2b7;
   }
 
   .photoSection  {
@@ -284,49 +248,25 @@ footer {
   }
 
   .aboutMe {
-    padding: 1em !important;
     width: 100%;
     margin-left: 0px;
   }
 
   .paralax {
     display: flex;
-    flex-direction: column;
-    padding: 1em !important;
   }
 }
-
-/* @media screen and (min-width: 992px) {
-  .container {
-    margin: 1em 2em;
-  }
-} */
 
 @media screen and (min-width: 1200px) {
   body {
     background-color: #141210;
     background-repeat: no-repeat;
-    color: black;
     background-size: cover;
-    color: #05e4be;
-  }
-  .photoSection {
-    /* margin: 3em; */
   }
 
-  /* .paralax {
-    background-image: url(https://images.unsplash.com/photo-1422640805998-18a4dd89bec2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1148&q=80);
-    max-width: 100vw;
-    height: 100%;
-    padding: 100px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  } */
   .paralax {
     height: 100%;
-    padding: 10vw
+    padding: 3vw
   }
   .footer {
     padding: 1em;
