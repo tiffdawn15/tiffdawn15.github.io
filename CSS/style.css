@@ -4,9 +4,10 @@ html {
 
 /* My name in the header  */
 
-h1 {
+h1, h2 {
   font-size: 67px;
-  color: #a09a79;
+  color: #fcbf49;
+  padding-left: 0.5em;
 }
 
 /* Nav bar in at the top */
@@ -36,7 +37,7 @@ li a {
 }
 
 li a:hover {
-  color: #a09a79;
+  color: #fcbf49;
   text-shadow: 0px 0px 30px #32cd32;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -45,7 +46,7 @@ li a:hover {
 }
 
 .navbar-light .navbar-brand {
-  color: #a09a79;
+  color: #fcbf49;
 }
 
 .noDot {
@@ -122,6 +123,9 @@ p {
   flex-direction: row;
 }
 
+.projectImage{
+  width: 100%;
+}
 /* Styling for Project sections */
 
 a {
@@ -131,7 +135,7 @@ a {
 }
 
 a:hover {
-  color: #a09a79;
+  color: #eae2b7;
   text-shadow: 0px 0px 30px #32cd32;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -143,9 +147,15 @@ a:hover {
   color: #543cdd;
 }
 
+.square-photo-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .square-image {
-  max-height: 300px;
-  max-width: 30rem;
+  height: 30rem;
+  max-width: 40rem;
   padding: 10px;
 }
 
@@ -165,12 +175,11 @@ a:hover {
   justify-content: space-between;
 }
 
-img {
-  max-height: 500px;
-  max-width: 700px;
+/* img {
+  height: 75%;
   padding: 10px;
   align-items: center;
-}
+} */
 
 .wrapper {
   flex-direction: column;
@@ -253,12 +262,11 @@ footer {
     background-color: #141210;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #a09a79;
   }
 
   .paralax {
     height: 100%;
-    padding: 5vw
+    padding: 3vw
   }
   .footer {
     padding: 1em;
