@@ -1,6 +1,3 @@
-var submitButton = document.querySelector(submit)
-
-var projectScroll = document.querySelectorAll(slide)
 
 
 document.getElementById('contactForm').addEventListener('submit', async function(event) {
@@ -11,14 +8,18 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const message = document.getElementById('message').value;
 
     try {
-      const response = await fetch('/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, email, message })
-      });
-
+        const response = await fetch('http://localhost:3000/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              message: message
+            })
+          });
+          console.log(response.body);
       if (response.ok) {
         alert('Email sent successfully');
       } else {
