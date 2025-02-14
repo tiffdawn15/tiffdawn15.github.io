@@ -175,12 +175,6 @@ a:hover {
   justify-content: space-between;
 }
 
-/* img {
-  height: 75%;
-  padding: 10px;
-  align-items: center;
-} */
-
 .wrapper {
   flex-direction: column;
   padding: 15px;
@@ -200,6 +194,7 @@ a:hover {
 .backend {
   text-align: right;
 }
+
 
 
 /* Add a background color and some padding around the form */
