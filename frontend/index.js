@@ -1,31 +1,40 @@
-
-
-document.getElementById('contactForm').addEventListener('submit', async function(event) {
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
     try {
-        const response = await fetch('http://localhost:3000/send-email', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              name: name,
-              email: email,
-              message: message
-            })
-          });
-          console.log(response.body);
+      const response = await fetch("http://localhost:3000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+        }),
+      });
       if (response.ok) {
-        alert('Email sent successfully');
+        showToast("Email sent successfully");
       } else {
-        alert('Error sending email');
+        showToast("Error sending email");
       }
     } catch (error) {
-      alert('Error sending email');
+      showToast("Error sending email");
     }
   });
+
+// Add this JavaScript to your script file
+function showToast(message) {
+  var toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.className = "toast show";
+  setTimeout(function () {
+    toast.className = toast.className.replace("show", "");
+  }, 3000);
+}

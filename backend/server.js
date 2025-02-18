@@ -9,8 +9,17 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors()); // Use cors middleware
+app.use(cors());
 app.use(bodyParser.json());
+
+const errorHandler = (err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({
+        status: 'error',
+        message: 'Something went wrong!',
+        error: process.env.NODE_ENV === 'development' ? err.message : undefined
+    });
+};
 
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
@@ -30,10 +39,11 @@ app.post('/send-email', async (req, res) => {
 
     res.status(200).send('Email sent successfully');
   } catch (error) {
-    console.error('Error sending email:', error); // Log the error
     res.status(500).send('Error sending email');
   }
 });
+
+app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
