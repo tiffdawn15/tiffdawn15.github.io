@@ -1,0 +1,77 @@
+:root {
+  --primary-color: #f5cb5c;
+  --secondary-color: #cd9020;
+  --background-color: #0b0b0b;
+  --text-color: #f2ecdd;
+  --accent-color: #333533; /* Example accent color */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poiret One", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  overflow: hidden;
+  display: flex;
+}
+
+.myFace {
+  width: auto;
+  height: 45em;
+}
+
+.aboutMe {
+  width: 55%;
+  margin: 9em;
+  display:flex;
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin: 9em;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  font-size: 2em;
+  color: var(--primary-color);
+}
+
+.title {
+  font-size: 3em;
+  color: var(--secondary-color);
+}
+
+.header {
+  display: flex;
+  font-size: 5em;
+  padding: 10px;
+  color: var(--primary-color);
+}
