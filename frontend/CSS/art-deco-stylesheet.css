@@ -22,22 +22,29 @@ body {
   display: flex;
 }
 
+.art-deco-1 {
+  width: 16em;
+  height: 20em;
+  align-self: center;
+}
+
 .myFace {
   width: auto;
   height: 45em;
 }
 
 .aboutMe {
+  font-size: 18px;
   width: 55%;
-  margin: 9em;
-  display:flex;
+  margin: 0em 3em 1em 9em;
+  display: flex;
   flex-direction: column;
 }
 
 .skills {
   display: flex;
   flex-direction: column;
-  margin: 9em;
+  margin: 1em 9em;
 }
 
 .column {
@@ -57,6 +64,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: .5em;
 }
 
 .skill {
@@ -65,13 +73,118 @@ body {
 }
 
 .title {
+  margin: 0 auto;
   font-size: 3em;
   color: var(--secondary-color);
 }
 
+.decoration {
+  width: 48%;
+}
+
 .header {
+  margin: 0 auto;
   display: flex;
   font-size: 5em;
   padding: 10px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.projects {
+  width: 100%;
+}
+
+.picture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 20em;
+  gap: 12em;
+  padding: 20px;
+}
+
+.picture-item {
+  perspective: 1000px;
+  /* Add perspective to the container */
+}
+
+.picture-item-inner {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.picture-item:hover .picture-item-inner {
+  transform: rotateY(180deg);
+}
+
+.picture-item-front,
+.picture-item-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-color);
+}
+.picture-item-front img {
+  width: 100%; /* Adjust the width as needed */
+  height: auto;
+}
+
+.picture-item-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--background-color); /* Adjust as needed */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.projects {
+  width: 100%;
+}
+
+
+.icon {
+  float: left;
+  max-height: 3em;
+  border-radius: 25px;
+}
+
+.contact-me-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 6em;
+  width: 50%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
