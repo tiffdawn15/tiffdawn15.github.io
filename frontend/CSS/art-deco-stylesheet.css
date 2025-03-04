@@ -154,6 +154,7 @@ body {
 
 
 .icon {
+  margin: 1em;
   float: left;
   max-height: 3em;
   border-radius: 25px;
