@@ -85,7 +85,7 @@ body {
 .header {
   margin: 0 auto;
   display: flex;
-  font-size: 5em;
+  font-size: 4em;
   padding: 10px;
   color: var(--secondary-color);
 }
