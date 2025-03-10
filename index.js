@@ -1,14 +1,13 @@
 document
   .getElementById("contactForm")
   .addEventListener("submit", async function (event) {
-    event.preventDefault();
 
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
     try {
-      const response = await fetch("http://localhost:3000/send-email", {
+      const response = await fetch("http://node-nation.netlify.app/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
