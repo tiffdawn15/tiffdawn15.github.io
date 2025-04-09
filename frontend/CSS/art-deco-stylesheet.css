@@ -90,10 +90,6 @@ body {
   color: var(--secondary-color);
 }
 
-.projects {
-  width: 100%;
-}
-
 .picture-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -104,6 +100,7 @@ body {
 
 .picture-item {
   perspective: 1000px;
+  margin-left: 1em;
   /* Add perspective to the container */
 }
 
