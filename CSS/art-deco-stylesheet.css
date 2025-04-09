@@ -81,7 +81,9 @@ body {
 .decoration {
   width: 48%;
 }
-
+footer {
+  margin-top: 4em;
+}
 .header {
   margin: 0 auto;
   display: flex;
