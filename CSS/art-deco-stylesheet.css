@@ -92,11 +92,6 @@ footer {
   color: var(--secondary-color);
 }
 
-.projects {
-  margin-bottom: 3em;
-  width: 100%;
-}
-
 .picture-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -107,6 +102,7 @@ footer {
 
 .picture-item {
   perspective: 1000px;
+  margin-left: 1em;
   /* Add perspective to the container */
 }
 
