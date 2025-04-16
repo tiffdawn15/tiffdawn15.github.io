@@ -133,7 +133,7 @@ footer {
 }
 .picture-item-front img {
   width: 100%; /* Adjust the width as needed */
-  height: auto;
+  height: 100%;
 }
 
 .picture-item-back {
@@ -143,7 +143,6 @@ footer {
   justify-content: center;
   align-items: center;
   color: var(--background-color); /* Adjust as needed */
-  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -187,4 +186,77 @@ footer {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+/* iPad Size */
+@media (max-width: 1024px) {
+  .top {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutMe {
+    margin-top: 20px;
+  
+  }
+
+  .myFace {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* Mobile form */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .column{
+    padding-bottom: 1em;
+  }
+
+  .center {
+    margin-bottom: 1em;
+  }
+  
+
+  .skill {
+    font-size: 1.5em;
+  }
+
+  .title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .decoration {
+    width: 100%;
+  }
+
+  footer {
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  .header {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .picture-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 15em;
+    gap: 2em;
+    padding: 10px;
+  }
 }
