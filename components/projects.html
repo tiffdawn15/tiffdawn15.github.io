@@ -1,0 +1,46 @@
+<script src="../assets/js/projects.js"> </script>
+                this.shadowRoot.innerHTML = `                    
+                    <div class="project-card">
+                        <div class="floating-elements">
+                            <div class="floating-element"></div>
+                            <div class="floating-element"></div>
+                            <div class="floating-element"></div>
+                        </div>
+                        
+                        <div class="image-container">
+                            <img src="${this.image}" alt="${this.title}" class="project-image" />
+                            <div class="image-overlay">
+                                ${this.github ? `<a href="${this.github}" target="_blank" class="overlay-btn github">View Code</a>` : ''}
+                                ${this.demo ? `<a href="${this.demo}" target="_blank" class="overlay-btn demo">Live Demo</a>` : ''}
+                            </div>
+                        </div>
+                        
+                        <div class="content">
+                            <div class="project-header">
+                                <h3 class="project-title">${this.title}</h3>
+                                <span class="status-badge">${statusText}</span>
+                            </div>
+                            
+                            <p class="project-description">${this.description}</p>
+                            
+                            ${technologies.length > 0 ? `
+                                <div class="technologies">
+                                    ${technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                                </div>
+                            ` : ''}
+                            
+                            <div class="project-links">
+                                ${this.github ? 
+                                    `<a href="${this.github}" target="_blank" class="project-link github-link">GitHub</a>` : 
+                                    `<span class="project-link link-disabled">No Repository</span>`
+                                }
+                                ${this.demo ? 
+                                    `<a href="${this.demo}" target="_blank" class="project-link demo-link">Live Demo</a>` : 
+                                    `<span class="project-link link-disabled">No Demo</span>`
+                                }
+                            </div>
+                        </div>
+                    </div>
+                `;
+</body>
+</html>
