@@ -11,6 +11,10 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
 }
 
 .project-card:hover {
@@ -21,7 +25,6 @@
 .image-container {
     position: relative;
     overflow: hidden;
-    height: 200px;
 }
 
 .project-image {

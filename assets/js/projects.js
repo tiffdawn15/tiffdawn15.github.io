@@ -25,16 +25,26 @@ class PortfolioProject extends HTMLElement {
     }
     
     async loadStyles() {
-        try {
-            const response = await fetch('./portfolio-project.css');
-            const css = await response.text();
-            const style = document.createElement('style');
-            style.textContent = css;
-            this.shadowRoot.appendChild(style);
-        } catch (error) {
-            console.warn('Could not load external CSS, using fallback styles');
-            this.loadFallbackStyles();
-        }
+        this.loadFallbackStyles();
+        // try {
+        //     const response = await fetch('../css/projects.css');
+        //     if (!response.ok) {
+        //         throw new Error(`Failed to fetch CSS: ${response.status} ${response.statusText}`);
+        //     }
+        //     const css = await response.text();
+        //     console.log(css);
+        //     const style = document.createElement('style');
+        //     style.textContent = css;
+    
+        //     if (this.shadowRoot) {
+        //         this.shadowRoot.appendChild(style);
+        //     } else {
+        //         conssole.error('ShadowRoot is not initialized.');
+        //     }
+        // } catch (error) {
+        //     console.warn('Could not load external CSS, using fallback styles:', error);
+        //     this.loadFallbackStyles();
+        // }
     }
     
     loadFallbackStyles() {
@@ -52,18 +62,19 @@ class PortfolioProject extends HTMLElement {
                 transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 backdrop-filter: blur(10px);
                 border: 1px solid rgba(255, 255, 255, 0.2);
-                position: relative;
+                position: relative; 
+                width: 80%; 
+                margin-bottom: 2em;
             }
             
             .project-card:hover {
                 transform: translateY(-10px) scale(1.02);
-                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 30px 60px #cd9020;
             }
             
             .image-container {
                 position: relative;
                 overflow: hidden;
-                height: 200px;
             }
             
             .project-image {
@@ -83,7 +94,7 @@ class PortfolioProject extends HTMLElement {
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+                background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), #f5cb5c);
                 opacity: 0;
                 transition: opacity 0.3s ease;
                 display: flex;
