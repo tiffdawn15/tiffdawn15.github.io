@@ -41,6 +41,65 @@ body {
   flex-direction: column;
 }
 
+.connect {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--secondary-color); /* Light background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 600px;
+  margin: 2rem auto; /* Center the section */
+}
+
+.connect h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.connect p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.contact-info .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Space between icons */
+  margin-top: 1rem;
+}
+
+.icon-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.icon-link:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes icons circular */
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for icons */
+}
+
 .skills {
   display: flex;
   flex-direction: column;
