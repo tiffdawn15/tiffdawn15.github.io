@@ -178,7 +178,7 @@ class PortfolioProject extends HTMLElement {
             }
             
             .tech-tag {
-                background: linear-gradient(135deg, #667eea, #764ba2);
+                background: linear-gradient(135deg, #667eea, #cd9020);
                 color: white;
                 padding: 6px 12px;
                 border-radius: 15px;
@@ -216,7 +216,7 @@ class PortfolioProject extends HTMLElement {
             }
             
             .demo-link {
-                background: linear-gradient(135deg, #667eea, #764ba2);
+                background: linear-gradient(135deg, #cd9020, #f5cb5c);
                 color: white;
             }
             
