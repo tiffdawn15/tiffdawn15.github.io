@@ -103,7 +103,43 @@ body {
 .skills {
   display: flex;
   flex-direction: column;
-  margin: 1em 9em;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+.title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2em 0
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column; /* Ensures content stacks vertically */
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  color: var(--background-color); /* Text color */
+  background-color: var(--primary-color); /* Background color */
+  padding: 1rem; /* Adds more internal spacing */
+  margin: 0.5rem; /* Adds spacing between skill items */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhances depth with shadow */
+  border-radius: 12px; /* Makes corners more rounded */
+  border: 1px solid var(--secondary-color); /* Adds a subtle border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.skill-item:hover {
+  transform: scale(1.05); /* Slightly enlarges on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow on hover */
 }
 
 .column {
@@ -143,7 +179,8 @@ body {
 .title {
   margin: 0 auto;
   font-size: 3em;
-  color: var(--secondary-color);
+  color: var(--background-color);
+  text-align: center;
 }
 
 .decoration {

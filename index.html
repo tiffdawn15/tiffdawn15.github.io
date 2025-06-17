@@ -1,128 +1,275 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="./assets//css/art-deco-stylesheet.css" />
+    <link rel="stylesheet" href="./assets/images/linkedin-in-brands.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="stylesheet" href="./assets//css/art-deco-stylesheet.css" />
-  <link rel="stylesheet" href="./assets/images/linkedin-in-brands.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <!-- Possible Toasts  -->
+    <div id="toast" class="toast"></div>
+    <!-- Top Section -->
+    <div class="top">
+      <img src="./assets/images/myface.jpg" alt="My face" class="myFace" />
 
-<body>
-  <!-- Possible Toasts  -->
-  <div id="toast" class="toast"></div>
-  <!-- Top Section -->
-  <div class="top">
-    <img src="./assets/images/myface.jpg" alt="My face" class="myFace" />
-
-    <!-- About section -->
-    <div class="aboutMe" id="aboutMe">
-      <img class="art-deco-1" src="./assets/images/art-deco-1.jpg" alt="Art Deco" class="artDeco" />
-      <h1 class="header">Hi, I'm Tiffany.</h1>
-      <p class="aboutMeText"> I’m a full-stack developer with six years of experience, specializing in building scalable
-        web applications for startups and fast-moving teams. My background in art and product design gives me a unique
-        perspective on creating intuitive, user-focused solutions that bridge technical execution with business goals.
-      </p>
-      <break></break>
-      <p> I've worked across both startup and enterprise environments, consistently delivering clean, maintainable code
-        and improving legacy systems with long-term sustainability in mind. I'm a fast learner who thrives in dynamic
-        settings and adapts quickly to new tools and technologies. </p>
-    </div>
-  </div>
-
-  <!-- TODO: Add Art Deco divider. This should be a triangle -->
-
-  <!-- // Skills Sections -->
-  <div class="skills">
-    <h1 class="header center">Skills</h1>
-    <div class="row">
-      <div class="column">
-        <h2 class="title">Frontend</h2>
-        <img class="decoration" src="./assets/images/art-deco-3.png">
-        <!-- TODO: add Art deco decoration here  -->
-        <div class="skill">Typescript</div>
-        <div class="skill">Angular</div>
-        <div class="skill">React</div>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-      </div>
-      <div class="column">
-        <h2 class="title">Backend</h2>
-        <img class="decoration" src="./assets/images/art-deco-3.png">
-        <div class="skill">Java</div>
-        <div class="skill">Spring Boot</div>
-        <div class="skill">Node</div>
-        <div class="skill">Express</div>
-        <div class="skill">MongoDb</div>
-        <div class="skill">Jira</div>
-        <div class="skill">Git</div>
+      <!-- About section -->
+      <div class="aboutMe" id="aboutMe">
+        <img
+          class="art-deco-1"
+          src="./assets/images/art-deco-1.jpg"
+          alt="Art Deco"
+          class="artDeco"
+        />
+        <h1 class="header">Hi, I'm Tiffany.</h1>
+        <p class="aboutMeText">
+          As a senior full-stack engineer, I
+          architect and deliver scalable web applications that drive measurable
+          business outcomes for high-growth startups and enterprise teams. I
+          combine deep technical expertise with strategic thinking to solve
+          complex problems and guide technical decisions that align with
+          long-term business objectives.
+        </p>
+        <break></break>
+        <p>
+          My unique background in art and product design enables me to bridge
+          the gap between engineering and product teams. I've consistently led
+          cross-functional initiatives, mentored junior developers, and made
+          architectural decisions that have scaled applications to handle
+          significant growth. My ability to rapidly assess new technologies and
+          integrate them strategically has helped teams stay competitive while
+          maintaining system stability and developer productivity.
+        </p>
       </div>
     </div>
-  </div>
-  <h1 class="header center">Projects</h1>
 
+    <!-- TODO: Add Art Deco divider. This should be a triangle -->
+    <div class="skills">
+      <div class="skills-container">
+        <!-- Frontend Skills -->
+        <div class="skill-row">
+          <h2 class="title">Front-end</h2>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/typescript-svgrepo-com.svg"
+              alt="Typescript Icon"
+              class="skill-icon"
+            />
+            <span>Typescript</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/angular-outlined-svgrepo-com.svg"
+              alt="Angular Icon"
+              class="skill-icon"
+            />
+            <span>Angular</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/react-svgrepo-com.svg"
+              alt="React Icon"
+              class="skill-icon"
+            />
+            <span>React</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/html5-01-svgrepo-com.svg"
+              alt="HTML Icon"
+              class="skill-icon"
+            />
+            <span>HTML</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/css-svgrepo-com.svg"
+              alt="CSS Icon"
+              class="skill-icon"
+            />
+            <span>CSS</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/javascript-16-svgrepo-com.svg"
+              alt="JavaScript Icon"
+              class="skill-icon"
+            />
+            <span>JavaScript</span>
+          </div>
+        </div>
 
-  <div class="projects">
-    <portfolio-project title="Mastercopy" 
-      description="This project showcases my expertise in Integrate APIs with the Angular application  Apply design principles to create a user-friendly, aesthetically
+        <!-- Backend Skills -->
+        <div class="skill-row">
+          <h2 class="title">Backend</h2>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/java-svgrepo-com.svg"
+              alt="Java Icon"
+              class="skill-icon"
+            />
+            <span>Java</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/spring-boot-svgrepo-com.svg"
+              alt="Spring Boot Icon"
+              class="skill-icon"
+            />
+            <span>Spring Boot</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/node-16-svgrepo-com.svg"
+              alt="Node Icon"
+              class="skill-icon"
+            />
+            <span>Node</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/Express.svg"
+              alt="Express Icon"
+              class="skill-icon"
+            />
+            <span>Express</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/mongodb-svgrepo-com.svg"
+              alt="MongoDB Icon"
+              class="skill-icon"
+            />
+            <span>MongoDB</span>
+          </div>
+          <div class="skill-item">
+            <img
+              class="icon"
+              src="./assets/images/github-alt-brands.svg"
+              alt="Git Icon"
+              class="skill-icon"
+            />
+            <span>Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="header center">Projects</h1>
+    <div class="projects">
+      <portfolio-project
+        title="Mastercopy"
+        description="This project showcases my expertise in Integrate APIs with the Angular application  Apply design principles to create a user-friendly, aesthetically
       pleasing interface,      Translate personal creative needs into scalable, technical
-      solutions" 
-      image="./assets/images/Screenshot 2024-12-08 at 10.26.02 AM.png"
-      technologies="Angular,Node.js,MongoDB" 
-      github="https://github.com/tiffdawn15/mastercopy"
-      demo="https://mastercopyllc.netlify.app/" status="in-progress">
-    </portfolio-project>
-    <portfolio-project title="Seminar Website" description="Dynamic integration of dashboard page and semianr advertisment page.     Client is able to login to the admin dashboard, fill out a form, and create a new seminar. The image
+      solutions"
+        image="./assets/images/Screenshot 2024-12-08 at 10.26.02 AM.png"
+        technologies="Angular,Node.js,MongoDB"
+        github="https://github.com/tiffdawn15/mastercopy"
+        demo="https://mastercopyllc.netlify.app/"
+        status="in-progress"
+      >
+      </portfolio-project>
+      <portfolio-project
+        title="Seminar Website"
+        description="Dynamic integration of dashboard page and semianr advertisment page.     Client is able to login to the admin dashboard, fill out a form, and create a new seminar. The image
         shows the seminars appearing on their website page.Showcases creative solutions for business needs."
-      image="./assets/images/Dragonheart_seminar.png" 
-      technologies="Angular, Typescript"
-      github="https://github.com/tiffdawn15/mar-tud" demo="https://your-demo-url.com" 
-      status="in-progress">
-    </portfolio-project>
-    <portfolio-project title="Dragonheart Springboot REST Api" 
-      description="MongoDb Database Integration"
-      image="./assets/images/SpringBoot.png" 
-      technologies="Java, Spring Boot,MongoDB"
-      github="https://github.com/tiffdawn15/dragonheart-backend" 
-      demo="https://your-demo-url.com" status="in-progress">
-    </portfolio-project>
-    <portfolio-project title="Draft Node REST Api" 
-      description="Node and Nest.js ETL pipeline for Mastercopy."
-      image="./assets/images/SpringBoot.png" 
-      technologies="Node, Nest.js, MongoDB"
-      github="https://github.com/tiffdawn15/draft" 
-      demo="https://your-demo-url.com" 
-      status="in-progress">
-    </portfolio-project>
-    <portfolio-project title="Client Work" description="MongoDb Database Integration"
-      image="./assets/images/marina1.png"
-      technologies="Web Node, Web Design, Requirements Gathering"
-      github="https://www.webnode.com/" demo="https://www.marinatudor.com/dragonheart-reiki/" status="completed">
-    </portfolio-project>
-  </div>
-  <div class="connect">
-    <h1>Let's Connect</h1>
-    <p>I'm always interested in discussing new opportunities.</p>
-    <div class="contact-info">
-        <img src="./assets/images/email-svgrepo-com.svg" alt="Email Icon" class="icon">
+        image="./assets/images/Dragonheart_seminar.png"
+        technologies="Angular, Typescript"
+        github="https://github.com/tiffdawn15/mar-tud"
+        demo="https://your-demo-url.com"
+        status="in-progress"
+      >
+      </portfolio-project>
+      <portfolio-project
+        title="Dragonheart Springboot REST Api"
+        description="MongoDb Database Integration"
+        image="./assets/images/SpringBoot.png"
+        technologies="Java, Spring Boot,MongoDB"
+        github="https://github.com/tiffdawn15/dragonheart-backend"
+        demo="https://your-demo-url.com"
+        status="in-progress"
+      >
+      </portfolio-project>
+      <portfolio-project
+        title="Draft Node REST Api"
+        description="Node and Nest.js ETL pipeline for Mastercopy."
+        image="./assets/images/SpringBoot.png"
+        technologies="Node, Nest.js, MongoDB"
+        github="https://github.com/tiffdawn15/draft"
+        demo="https://your-demo-url.com"
+        status="in-progress"
+      >
+      </portfolio-project>
+      <portfolio-project
+        title="Client Work"
+        description="MongoDb Database Integration"
+        image="./assets/images/marina1.png"
+        technologies="Web Node, Web Design, Requirements Gathering"
+        github="https://www.webnode.com/"
+        demo="https://www.marinatudor.com/dragonheart-reiki/"
+        status="completed"
+      >
+      </portfolio-project>
+    </div>
+    <div class="connect">
+      <h1>Let's Connect</h1>
+      <p>I'm always interested in discussing new opportunities.</p>
+      <div class="contact-info">
+        <img
+          src="./assets/images/email-svgrepo-com.svg"
+          alt="Email Icon"
+          class="icon"
+        />
         <p>tiffanymesser15@gmail.com</p>
-    </div>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/tiffany26/" target="_blank" class="icon-link">
-            <img src="assets/images/linkedin-svgrepo-com.svg" alt="LinkedIn" class="icon">
+      </div>
+      <div class="social-icons">
+        <a
+          href="https://www.linkedin.com/in/tiffany26/"
+          target="_blank"
+          class="icon-link"
+        >
+          <img
+            src="assets/images/linkedin-svgrepo-com.svg"
+            alt="LinkedIn"
+            class="icon"
+          />
         </a>
-        <a href="https://github.com/tiffdawn15" target="_blank" class="icon-link">
-            <img src="assets/css/computer-icons-github-github-logo-save-icon-format.jpg" alt="GitHub" class="icon">
+        <a
+          href="https://github.com/tiffdawn15"
+          target="_blank"
+          class="icon-link"
+        >
+          <img
+            src="assets/css/computer-icons-github-github-logo-save-icon-format.jpg"
+            alt="GitHub"
+            class="icon"
+          />
         </a>
+      </div>
     </div>
-</div>
 
-  <script src="./assets/js/projects.js"></script>
-  <script src="./assets/js/index.js"></script>
-</body>
-
+    <script src="./assets/js/projects.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
 </html>
