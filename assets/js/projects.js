@@ -1,55 +1,60 @@
 class PortfolioProject extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
+
+  static get observedAttributes() {
+    return [
+      "title",
+      "description",
+      "image",
+      "technologies",
+      "github",
+      "demo",
+      "status",
+    ];
+  }
+
+  connectedCallback() {
+    this.loadStyles().then(() => {
+      this.render();
+      this.addEventListeners();
+    });
+  }
+
+  attributeChangedCallback() {
+    if (this.shadowRoot && this.shadowRoot.querySelector(".project-card")) {
+      this.render();
     }
-    
-    static get observedAttributes() {
-        return [
-            'title', 'description', 'image', 'technologies', 
-            'github', 'demo', 'status'
-        ];
-    }
-    
-    connectedCallback() {
-        this.loadStyles().then(() => {
-            this.render();
-            this.addEventListeners();
-        });
-    }
-    
-    attributeChangedCallback() {
-        if (this.shadowRoot && this.shadowRoot.querySelector('.project-card')) {
-            this.render();
-        }
-    }
-    
-    async loadStyles() {
-        this.loadFallbackStyles();
-        // try {
-        //     const response = await fetch('../css/projects.css');
-        //     if (!response.ok) {
-        //         throw new Error(`Failed to fetch CSS: ${response.status} ${response.statusText}`);
-        //     }
-        //     const css = await response.text();
-        //     console.log(css);
-        //     const style = document.createElement('style');
-        //     style.textContent = css;
-    
-        //     if (this.shadowRoot) {
-        //         this.shadowRoot.appendChild(style);
-        //     } else {
-        //         conssole.error('ShadowRoot is not initialized.');
-        //     }
-        // } catch (error) {
-        //     console.warn('Could not load external CSS, using fallback styles:', error);
-        //     this.loadFallbackStyles();
-        // }
-    }
-    
-    loadFallbackStyles() {
-        const style = document.createElement('style');
-        style.textContent = `
+  }
+
+  async loadStyles() {
+    this.loadFallbackStyles();
+    // try {
+    //     const response = await fetch('../css/projects.css');
+    //     if (!response.ok) {
+    //         throw new Error(`Failed to fetch CSS: ${response.status} ${response.statusText}`);
+    //     }
+    //     const css = await response.text();
+    //     console.log(css);
+    //     const style = document.createElement('style');
+    //     style.textContent = css;
+
+    //     if (this.shadowRoot) {
+    //         this.shadowRoot.appendChild(style);
+    //     } else {
+    //         conssole.error('ShadowRoot is not initialized.');
+    //     }
+    // } catch (error) {
+    //     console.warn('Could not load external CSS, using fallback styles:', error);
+    //     this.loadFallbackStyles();
+    // }
+  }
+
+  loadFallbackStyles() {
+    const style = document.createElement("style");
+    style.textContent = `
             :host {
                 display: block;
             }
@@ -267,61 +272,94 @@ class PortfolioProject extends HTMLElement {
                 .project-title {
                     font-size: 1.2rem;
                 }
+
                 
                 .project-header {
                     flex-direction: column;
                     gap: 10px;
                     align-items: flex-start;
                 }
+                .project-card {
+                    margin-left: 1em
+                }
+
             }
         `;
-        this.shadowRoot.appendChild(style);
+    this.shadowRoot.appendChild(style);
+  }
+
+  get title() {
+    return this.getAttribute("title") || "Untitled Project";
+  }
+  get description() {
+    return this.getAttribute("description") || "No description available.";
+  }
+  get image() {
+    return (
+      this.getAttribute("image") ||
+      "https://via.placeholder.com/400x250?text=No+Image"
+    );
+  }
+  get technologies() {
+    return this.getAttribute("technologies") || "";
+  }
+  get github() {
+    return this.getAttribute("github") || "";
+  }
+  get demo() {
+    return this.getAttribute("demo") || "";
+  }
+  get status() {
+    return this.getAttribute("status") || "completed";
+  }
+
+  getTechnologiesArray() {
+    return this.technologies
+      .split(",")
+      .map((tech) => tech.trim())
+      .filter((tech) => tech);
+  }
+
+  getStatusColor() {
+    switch (this.status.toLowerCase()) {
+      case "completed":
+        return "#10b981";
+      case "in-progress":
+        return "#f59e0b";
+      case "planned":
+        return "#6b7280";
+      default:
+        return "#10b981";
     }
-    
-    get title() { return this.getAttribute('title') || 'Untitled Project'; }
-    get description() { return this.getAttribute('description') || 'No description available.'; }
-    get image() { return this.getAttribute('image') || 'https://via.placeholder.com/400x250?text=No+Image'; }
-    get technologies() { return this.getAttribute('technologies') || ''; }
-    get github() { return this.getAttribute('github') || ''; }
-    get demo() { return this.getAttribute('demo') || ''; }
-    get status() { return this.getAttribute('status') || 'completed'; }
-    
-    getTechnologiesArray() {
-        return this.technologies.split(',').map(tech => tech.trim()).filter(tech => tech);
+  }
+
+  getStatusText() {
+    switch (this.status.toLowerCase()) {
+      case "completed":
+        return "Completed";
+      case "in-progress":
+        return "In Progress";
+      case "planned":
+        return "Planned";
+      default:
+        return "Completed";
     }
-    
-    getStatusColor() {
-        switch(this.status.toLowerCase()) {
-            case 'completed': return '#10b981';
-            case 'in-progress': return '#f59e0b';
-            case 'planned': return '#6b7280';
-            default: return '#10b981';
-        }
+  }
+
+  render() {
+    const technologies = this.getTechnologiesArray();
+    const statusColor = this.getStatusColor();
+    const statusText = this.getStatusText();
+
+    // Update status badge color
+    const existingCard = this.shadowRoot.querySelector(".project-card");
+    if (existingCard) {
+      existingCard.remove();
     }
-    
-    getStatusText() {
-        switch(this.status.toLowerCase()) {
-            case 'completed': return 'Completed';
-            case 'in-progress': return 'In Progress';
-            case 'planned': return 'Planned';
-            default: return 'Completed';
-        }
-    }
-    
-    render() {
-        const technologies = this.getTechnologiesArray();
-        const statusColor = this.getStatusColor();
-        const statusText = this.getStatusText();
-        
-        // Update status badge color
-        const existingCard = this.shadowRoot.querySelector('.project-card');
-        if (existingCard) {
-            existingCard.remove();
-        }
-        
-        const cardElement = document.createElement('div');
-        cardElement.className = 'project-card';
-        cardElement.innerHTML = `
+
+    const cardElement = document.createElement("div");
+    cardElement.className = "project-card";
+    cardElement.innerHTML = `
             <div class="floating-elements">
                 <div class="floating-element"></div>
                 <div class="floating-element"></div>
@@ -329,10 +367,20 @@ class PortfolioProject extends HTMLElement {
             </div>
             
             <div class="image-container">
-                <img src="${this.image}" alt="${this.title}" class="project-image" />
+                <img src="${this.image}" alt="${
+      this.title
+    }" class="project-image" />
                 <div class="image-overlay">
-                    ${this.github ? `<a href="${this.github}" target="_blank" class="overlay-btn github">View Code</a>` : ''}
-                    ${this.demo ? `<a href="${this.demo}" target="_blank" class="overlay-btn demo">Live Demo</a>` : ''}
+                    ${
+                      this.github
+                        ? `<a href="${this.github}" target="_blank" class="overlay-btn github">View Code</a>`
+                        : ""
+                    }
+                    ${
+                      this.demo
+                        ? `<a href="${this.demo}" target="_blank" class="overlay-btn demo">Live Demo</a>`
+                        : ""
+                    }
                 </div>
             </div>
             
@@ -344,60 +392,74 @@ class PortfolioProject extends HTMLElement {
                 
                 <p class="project-description">${this.description}</p>
                 
-                ${technologies.length > 0 ? `
+                ${
+                  technologies.length > 0
+                    ? `
                     <div class="technologies">
-                        ${technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        ${technologies
+                          .map(
+                            (tech) => `<span class="tech-tag">${tech}</span>`
+                          )
+                          .join("")}
                     </div>
-                ` : ''}
+                `
+                    : ""
+                }
                 
                 <div class="project-links">
-                    ${this.github ? 
-                        `<a href="${this.github}" target="_blank" class="project-link github-link">GitHub</a>` : 
-                        `<span class="project-link link-disabled">No Repository</span>`
+                    ${
+                      this.github
+                        ? `<a href="${this.github}" target="_blank" class="project-link github-link">GitHub</a>`
+                        : `<span class="project-link link-disabled">No Repository</span>`
                     }
-                    ${this.demo ? 
-                        `<a href="${this.demo}" target="_blank" class="project-link demo-link">Live Demo</a>` : 
-                        `<span class="project-link link-disabled">No Demo</span>`
+                    ${
+                      this.demo
+                        ? `<a href="${this.demo}" target="_blank" class="project-link demo-link">Live Demo</a>`
+                        : `<span class="project-link link-disabled">No Demo</span>`
                     }
                 </div>
             </div>
         `;
-        
-        this.shadowRoot.appendChild(cardElement);
-    }
-    
-    addEventListeners() {
-        const card = this.shadowRoot.querySelector('.project-card');
-        
-        card.addEventListener('mouseenter', () => {
-            this.dispatchEvent(new CustomEvent('project-hover', {
-                detail: {
-                    title: this.title,
-                    status: this.status
-                },
-                bubbles: true
-            }));
-        });
-        
-        card.addEventListener('click', (e) => {
-            if (e.target.tagName !== 'A') {
-                this.dispatchEvent(new CustomEvent('project-click', {
-                    detail: {
-                        title: this.title,
-                        description: this.description,
-                        technologies: this.getTechnologiesArray()
-                    },
-                    bubbles: true
-                }));
-            }
-        });
-    }
+
+    this.shadowRoot.appendChild(cardElement);
+  }
+
+  addEventListeners() {
+    const card = this.shadowRoot.querySelector(".project-card");
+
+    card.addEventListener("mouseenter", () => {
+      this.dispatchEvent(
+        new CustomEvent("project-hover", {
+          detail: {
+            title: this.title,
+            status: this.status,
+          },
+          bubbles: true,
+        })
+      );
+    });
+
+    card.addEventListener("click", (e) => {
+      if (e.target.tagName !== "A") {
+        this.dispatchEvent(
+          new CustomEvent("project-click", {
+            detail: {
+              title: this.title,
+              description: this.description,
+              technologies: this.getTechnologiesArray(),
+            },
+            bubbles: true,
+          })
+        );
+      }
+    });
+  }
 }
 
 // Define the custom element
-customElements.define('portfolio-project', PortfolioProject);
+customElements.define("portfolio-project", PortfolioProject);
 
 // Export for module usage
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = PortfolioProject;
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = PortfolioProject;
 }
