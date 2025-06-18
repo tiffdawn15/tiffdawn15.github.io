@@ -315,7 +315,7 @@ footer {
 }
 @media screen and (max-width: 1024px) {
   /* Center all sections */
-  .aboutMe, .skills, .skill-row, .top, .projects {
+  .aboutMe, .skills, .top, .projects {
     display: flex;
     flex-direction: column; /* Stack content vertically */
     align-items: center; /* Center content horizontally */

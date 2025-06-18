@@ -263,6 +263,13 @@ class PortfolioProject extends HTMLElement {
                 0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
                 50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
             }
+             @media (max-width: 1024px) {
+                .project-card{
+                  margin-left: 7em;
+                }
+             }
+
+
             
             @media (max-width: 768px) {
                 .content {
